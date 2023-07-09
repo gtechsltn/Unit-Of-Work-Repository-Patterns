@@ -19,6 +19,17 @@ DbContext class is a combination of the Unit of Work and Repository patterns, wh
 + Startup project: UnitOfWorkRepositoryPatterns
 + Visual Studio -> Tools -> Package Manager Console -> Update-Database
 
+# Transaction
+```
+  using (TransactionScope scope = new TransactionScope())
+  {
+     ... Do Stuff with Connection 1 using SqlDataReader
+     ... Do Stuff with Connection 2 using Entity Framework
+     ... Do Stuff with Connection 3 on another Oracle Database
+     ... And for good measure do some stuff in MSMQ or other DTC resource
+     scope.Complete(); // If you are happy
+  }
+  ```
 # Add more features
 + Import from csv using CSVHelper: https://www.syncfusion.com/blogs/post/handling-csv-files-in-asp-net-core-web-apis.aspx
 + Import from csv using CSVHelper: https://code-maze.com/csharp-read-data-from-csv-file/
