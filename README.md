@@ -8,18 +8,32 @@ With this we ensure that either all operations succeed or fail as a single unit.
 DbContext class is a combination of the Unit of Work and Repository patterns, where the DbContext is an abstraction of the Unit of Work pattern and a DbSet is an abstraction of the Repository pattern.
 + Link to article: https://www.linkedin.com/pulse/repository-unit-work-patterns-net-core-dimitar-iliev/
 + Implement DbContext with UoW and Transaction: https://dotnettutorials.net/lesson/unit-of-work-csharp-mvc/
-+ https://www.c-sharpcorner.com/article/repository-and-unitofwork-pattern-part-1/
-+ https://www.c-sharpcorner.com/article/repository-and-unitofwork-pattern-part-2/
-+ https://www.c-sharpcorner.com/article/repository-and-unitofwork-pattern-part-three/
-+ https://enlabsoftware.com/development/how-to-implement-repository-unit-of-work-design-patterns-in-dot-net-core-practical-examples-part-one.html
-+ https://enlabsoftware.com/development/how-to-implement-repository-unit-of-work-design-patterns-in-dot-net-core-practical-examples-part-two.html
-+ https://codewithmukesh.com/blog/repository-pattern-in-aspnet-core/
 
-# Getting Started
+## Getting Started
 + Startup project: UnitOfWorkRepositoryPatterns
 + Visual Studio -> Tools -> Package Manager Console -> Update-Database
 
-# Transaction
+## Questions
++ How to handle the Transaction?
++ How to handle the Logging?
++ How to handle the Auditing or How to use the IHttpContextAccessor?
+
+## Repository and Unit Of Work pattern
++ https://www.c-sharpcorner.com/article/repository-and-unitofwork-pattern-part-1/
++ https://www.c-sharpcorner.com/article/repository-and-unitofwork-pattern-part-2/
++ https://www.c-sharpcorner.com/article/repository-and-unitofwork-pattern-part-three/
+
+## Implement Repository and Unit Of Work pattern
++ https://enlabsoftware.com/development/how-to-implement-repository-unit-of-work-design-patterns-in-dot-net-core-practical-examples-part-one.html
++ https://enlabsoftware.com/development/how-to-implement-repository-unit-of-work-design-patterns-in-dot-net-core-practical-examples-part-two.html
+
+## Repository pattern
++ https://codewithmukesh.com/blog/repository-pattern-in-aspnet-core/
++ https://pradeepl.com/blog/repository-and-unit-of-work-pattern-asp-net-core-3-1/
++ https://www.c-sharpcorner.com/article/repository-and-unitofwork-pattern-part-three/
+
+
+## Transaction
 ```
   using (TransactionScope scope = new TransactionScope())
   {
